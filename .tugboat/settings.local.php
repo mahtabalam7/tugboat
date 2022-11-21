@@ -10,4 +10,4 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 // Use the TUGBOAT_REPO_ID to generate a hash salt for Tugboat sites.
-$settings['hash_salt'] = hash('sha256', getenv('TUGBOAT_REPO_ID'));
+$settings['hash_salt'] = hash('sha256', '79510308fed2fb0c8d4e14f0c75eb526f04236d9'));

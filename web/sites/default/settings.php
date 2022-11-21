@@ -794,15 +794,15 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
-$databases['default']['default'] = array (
-  'database' => 'tugboat_new',
-  'username' => 'root',
-  'password' => 'root',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '3306',
-  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
-  'driver' => 'mysql',
-  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
-);
+// $databases['default']['default'] = array (
+//   'database' => 'tugboat_new',
+//   'username' => 'root',
+//   'password' => 'root',
+//   'prefix' => '',
+//   'host' => 'localhost',
+//   'port' => '3306',
+//   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+//   'driver' => 'mysql',
+//   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
+// );
 $settings['config_sync_directory'] = 'sites/default/files/config_M0S0Rkn5BvXDjpLNLS2HnEmwIg40CyjGSe32f3sGTD4JPciKNbqcac2Mm-67GwEvPeSCzU0afQ/sync';
