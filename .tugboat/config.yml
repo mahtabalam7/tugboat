@@ -76,10 +76,10 @@ services:
       build:
         - composer require --no-update drush/drush
         - composer install --optimize-autoloader
-        - vendor/bin/drush cache:rebuild
-        - vendor/bin/drush config:import -y
-        - vendor/bin/drush updatedb -y
-        - vendor/bin/drush cache:rebuild
+        - ${TUGBOAT_ROOT}/vendor/bin/drush cache:rebuild
+        - ${TUGBOAT_ROOT}/vendor/bin/drush config:import -y
+        - ${TUGBOAT_ROOT}/vendor/bin/drush updatedb -y
+        - ${TUGBOAT_ROOT}/vendor/bin/drush cache:rebuild
 
   # This 'mysql' key acts as the hostname to access the service by from the php service.
   mysql:
