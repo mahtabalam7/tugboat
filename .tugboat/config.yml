@@ -76,10 +76,10 @@ services:
       build:
         - composer require --no-update drush/drush
         - composer install --optimize-autoloader
-        - cd "${DOCROOT}" && /vendor/bin/drush cache:rebuild
-        - cd "${DOCROOT}" && /vendor/bin/drush config:import -y
-        - cd "${DOCROOT}" && /vendor/bin/drush updatedb -y
-        - cd "${DOCROOT}" && /vendor/bin/drush cache:rebuild
+        # - cd "${DOCROOT}" && /vendor/bin/drush cache:rebuild
+        # - cd "${DOCROOT}" && /vendor/bin/drush config:import -y
+        # - cd "${DOCROOT}" && /vendor/bin/drush updatedb -y
+        # - cd "${DOCROOT}" && /vendor/bin/drush cache:rebuild
 
   # This 'mysql' key acts as the hostname to access the service by from the php service.
   mysql:
