@@ -43,7 +43,7 @@ services:
       # already be present.
       update:
         # Use the tugboat-specific Drupal settings.
-        - cp "${TUGBOAT_ROOT}/.tugboat/settings.local.php" "${DOCROOT}/sites/default/"
+        # - cp "${TUGBOAT_ROOT}/.tugboat/settings.local.php" "${DOCROOT}/sites/default/"
 
         # Install/update packages managed by composer, including drush.
         - composer install --optimize-autoloader
@@ -60,8 +60,8 @@ services:
         # This results in smaller previews and reduces the build time.
         - composer require --dev drupal/stage_file_proxy
         - composer require drush/drush
-        - cd "${TUGBOAT_ROOT}" && vendor/bin/drush pm:enable --yes stage_file_proxy
-        - cd "${TUGBOAT_ROOT}" && vendor/bin/drush config:set --yes stage_file_proxy.settings origin "http://www.example.com"
+        # - cd "${TUGBOAT_ROOT}" && vendor/bin/drush pm:enable --yes stage_file_proxy
+        # - cd "${TUGBOAT_ROOT}" && vendor/bin/drush config:set --yes stage_file_proxy.settings origin "http://www.example.com"
 
         # Set file permissions such that Drupal will not complain.
         - chgrp -R www-data "${DOCROOT}/sites/default/files"
